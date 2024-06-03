@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        <div class="row">
+            {% load crispy_forms_tags %}
+            {% comment %} <div class="col-md-6">
+                <form action="" method="post" enctype="multipart/form-data" style="height: 500px; margin: auto;">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                  
+                    <input class="form-comtroll btn btn-success" type="submit" value="Submit">
+                </form>
+            </div> {% endcomment %}
+
+            <div class="col-md-6">
+                <form action="" method="post" enctype="multipart/form-data" style=" margin: auto;">
+                    {% csrf_token %}
+                    {{ student_form|crispy }}
+                    <input class="form-comtroll btn btn-success" type="submit" value="Submit">
+                </form>
+            </div>
+
+        </div>
+    </div>   
+</div>
+
+
+
+
+{% endblock content %}
+
